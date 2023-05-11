@@ -17,4 +17,6 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
       - name: Build container
-        run: docker-compose up -d
+        run: |
+          cd docker
+          docker-compose up -d
