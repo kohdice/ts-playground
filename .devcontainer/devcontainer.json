@@ -1,0 +1,35 @@
+{
+  "name": "Node",
+  "dockerComposeFile": "../docker/docker-compose.yml",
+  "service": "node",
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "workbench.colorTheme": "Solarized Dark+",
+        "workbench.iconTheme": "material-icon-theme",
+        "editor.fontFamily": "Hack Nerd Font",
+        "terminal.integrated.fontFamily": "Hack Nerd Font",
+        "editor.rulers": [100],
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "dotfiles.repository": "kohdice/dotfiles-devcontainer",
+        "dotfiles.targetPath": "~/dotfiles",
+        "dotfiles.installCommand": "~/dotfiles/install.sh"
+      },
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "ms-azuretools.vscode-docker",
+        "eamodio.gitlens",
+        "donjayamanne.githistory",
+        "EditorConfig.EditorConfig",
+        "mikestead.dotenv",
+        "yzhang.markdown-all-in-one",
+        "sohamkamani.code-eol",
+        "streetsidesoftware.code-spell-checker",
+        "gruntfuggly.todo-tree"
+      ]
+    }
+  }
+}
