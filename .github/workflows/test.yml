@@ -1,6 +1,6 @@
-name: Continuous Integration of container building
+name: Continuous Integration of ts-playground
 
-run-name: ${{ github.actor }} is testing out container building
+run-name: ${{ github.actor }} is testing out ts-playground
 
 on:
   push:
@@ -11,12 +11,14 @@ on:
     types: [opened, synchronize]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v3
-      - name: Build container
-        run: |
-          cd docker
-          docker-compose up -d
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: yarn install
+      - name: Run test
+        run: yarn test
